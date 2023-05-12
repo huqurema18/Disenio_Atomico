@@ -1,0 +1,27 @@
+.header {
+  width: 100%;
+  background-color: orange;
+  padding: 1em;
+
+  &__button {
+    background-color: crimson;
+  }
+
+  &__nav {
+    background-color: bisque;
+  }
+
+  &__li {
+    color: aqua;
+    padding: 15px;
+
+    &--colorRed {
+      @extend .header__li;
+      color: red;
+    }
+  }
+}
+
+.hidden {
+  display: none;
+}
