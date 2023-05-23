@@ -1,28 +1,32 @@
-// App.js
 import React from 'react';
 
+const headers = ['Nombre', 'Apellido', 'Edad', 'Cédula', 'Mayor de edad'];
+const rows = [
+  ['Juan', 'Pérez', 25, '12345678'],
+  ['María', 'González', 17, '87654321'],
+  // ... más filas
+];
+
 const App = () => {
+  const checkAge = (age) => age >= 18 ? 'Sí' : 'No';
+
   return (
     <table>
       <thead>
         <tr>
-          <th>Nombre</th>
-          <th>Apellido</th>
-          <th>Edad</th>
-          <th>Cédula</th>
+          {headers.map((header, index) => <th key={index}>{header}</th>)}
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>Juan</td>
-          <td>Pérez</td>
-          <td>25</td>
-          <td>12345678</td>
-        </tr>
+        {rows.map((row, index) => (
+          <tr key={index}>
+            {row.map((cell, index) => <td key={index}>{cell}</td>)}
+            <td>{checkAge(row[2])}</td>
+          </tr>
+        ))}
       </tbody>
     </table>
   );
 }
 
 export default App;
-
