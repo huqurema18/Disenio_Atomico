@@ -1,3 +1,4 @@
+// App.js
 import React from 'react';
 
 const headers = ['Nombre', 'Apellido', 'Edad', 'Cédula', 'Mayor de edad'];
