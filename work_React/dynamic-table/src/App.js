@@ -5,6 +5,7 @@ const headers = ['Nombre', 'Apellido', 'Edad', 'Cédula', 'Mayor de edad'];
 const rows = [
   ['Juan', 'Pérez', 25, '12345678'],
   ['María', 'González', 17, '87654321'],
+  ['hugi','fernandhino',18,'47824782']
   // ... más filas
 ];
 
