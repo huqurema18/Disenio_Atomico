@@ -1,34 +1,11 @@
-// App.js
 import React from 'react';
+import PersonList from './componentes/Organismos/PersonList';
 
-const headers = ['Nombre', 'Apellido', 'Edad', 'Cédula', 'Mayor de edad'];
-const rows = [
-  ['Juan', 'Pérez', 25, '12345678'],
-  ['María', 'González', 17, '87654321'],
-  ['hugi','fernandhino',18,'47824782']
-  // ... más filas
-];
-
-const App = () => {
-  const checkAge = (age) => age >= 18 ? 'Sí' : 'No';
-
-  return (
-    <table>
-      <thead>
-        <tr>
-          {headers.map((header, index) => <th key={index}>{header}</th>)}
-        </tr>
-      </thead>
-      <tbody>
-        {rows.map((row, index) => (
-          <tr key={index}>
-            {row.map((cell, index) => <td key={index}>{cell}</td>)}
-            <td>{checkAge(row[2])}</td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
-  );
-}
+const App = () => (
+  <div>
+    <h1>Lista de Personas</h1>
+    <PersonList />
+  </div>
+);
 
 export default App;
