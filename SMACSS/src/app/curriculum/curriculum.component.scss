@@ -2,11 +2,10 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
   width: 70%;
+  margin-left: 15%;
+  background-color: #f4f4f4;
   font-family: Arial, sans-serif;
-  display: flex;
-  justify-content: center;
 }
 
 h1, h2, h3 {
@@ -29,23 +28,17 @@ iframe {
 
 /* ----- Layout ----- */
 .container {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
   padding: 20px;
   margin: 50px;
   background-color: #ffffff;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
-
-}
-
-.item {
-  width: 33.33%;
-  padding: 10px;
-  box-sizing: border-box;
 }
 
 .description {
-  width: 100%;
+  grid-column: span 3;
 }
 
 /* ----- Module ----- */
@@ -55,6 +48,13 @@ iframe {
 
 .categories h2 {
   margin: 0 0 10px 0;
+}
+
+.gallery, .video, .attachments {
+  margin: 1rem;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
 .gallery {
