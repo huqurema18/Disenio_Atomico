@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from '../Atomos/Button';
+import './StylePT.css';
 
 const PersonTable = ({ personas, eliminarPersona }) => (
   <table>

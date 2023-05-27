@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './Input.css';
 const InputField = ({ label, name, value, onChange, required }) => (
   <div>
     <label>{label}</label>

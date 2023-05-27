@@ -1,6 +1,7 @@
 import React from 'react';
 import InputField from '../Atomos/InputField';
 import Button from '../Atomos/Button';
+import './StylePF.css';
 
 const PersonForm = ({ onSubmit, onChange, nuevaPersona }) => (
   <form onSubmit={onSubmit}>
